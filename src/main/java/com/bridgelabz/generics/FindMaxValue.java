@@ -20,21 +20,31 @@ public class FindMaxValue<E extends Comparable> {
 
     }
 
-    public static <E extends Comparable<E>> E findMoreMaximum(E... args) {
+    public static void main(String[] args) {
+        FindMaxValue findMaxValueForInteger = new FindMaxValue(11, 32, 13);
+        findMaxValueForInteger.findMaximumValue();
+
+        FindMaxValue findMaxValueForFloat = new FindMaxValue(11.0f, 32.0f, 13.0f);
+        findMaxValueForFloat.findMaximumValue();
+
+        FindMaxValue findMaxValueForCharacter = new FindMaxValue('A', 'Z', 'M');
+        findMaxValueForCharacter.findMaximumValue();
+
+        FindMaxValue findMaxValueForString = new FindMaxValue("Ramesh", "Piyush", "Apple");
+        findMaxValueForString.findMaximumValue();
+
+        FindMaxValue findMaxValue = new FindMaxValue();
+        System.out.println(findMaxValue.findMoreMaximum(11, 32, 43, 56, 23, 67));
+    }
+
+    public E findMoreMaximum(E... args) {
         List<E> list = Arrays.asList(args);
         Collections.sort(list);
         return list.get(list.size() - 1);
     }
 
-    public static void main(String[] args) {
-        System.out.println(FindMaxValue.findMoreMaximum(12, 12, 31, 432, 134, 43234, 543234));
-        System.out.println(FindMaxValue.findMoreMaximum('A', 'C', 'M', 'B', 'Z', 'J'));
-        System.out.println(FindMaxValue.findMoreMaximum("Mangesh", "Avinash", "Rajesh", "Ram", "Prakash"));
-        System.out.println(FindMaxValue.findMoreMaximum(1.05f, 10.2f, 300.0f, 1.0f, 100.0f, 200.0f));
-    }
-
-    public E findMaximumValue() {
-        return findMaximumValue(value1, value2, value3);
+    public void printMaximum(E max) {
+        System.out.println("Maximum value is: " + max);
     }
 
     public E findMaximumValue(E value1, E value2, E value3) {
@@ -46,5 +56,11 @@ public class FindMaxValue<E extends Comparable> {
             maximumNumber = value3;
         }
         return maximumNumber;
+    }
+
+    public E findMaximumValue() {
+        E max = findMaximumValue(value1, value2, value3);
+        printMaximum(max);
+        return max;
     }
 }
