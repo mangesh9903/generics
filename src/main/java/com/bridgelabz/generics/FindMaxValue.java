@@ -23,4 +23,15 @@ public class FindMaxValue {
         }
         return maximumValue;
     }
+
+    public Character findMaximumCharacter(Character char1, Character char2, Character char3) {
+        Character maximumCharacter = char1;
+        if (char2.compareTo(maximumCharacter) > 0) {
+            maximumCharacter = char2;
+        }
+        if (char3.compareTo(maximumCharacter) > 0) {
+            maximumCharacter = char3;
+        }
+        return maximumCharacter;
+    }
 }
