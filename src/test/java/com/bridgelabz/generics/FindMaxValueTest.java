@@ -56,4 +56,26 @@ public class FindMaxValueTest {
         Float expected = 10.0F;
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void givenThreeCharacter_shouldReturn_firstCharacterIsMaximum() {
+        Character actual = findMaxValue.findMaximumCharacter('Z', 'B', 'A');
+        Character expected = 'Z';
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void givenThreeCharacter_shouldReturn_secondCharacterIsMaximum() {
+        Character actual = findMaxValue.findMaximumCharacter('B', 'Z', 'A');
+        Character expected = 'Z';
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void givenThreeCharacter_shouldReturn_thirdCharacterIsMaximum() {
+        Character actual = findMaxValue.findMaximumCharacter('M', 'B', 'Z');
+        Character expected = 'Z';
+        Assert.assertEquals(expected, actual);
+    }
+
 }
