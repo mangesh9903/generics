@@ -1,5 +1,9 @@
 package com.bridgelabz.generics;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class FindMaxValue<E extends Comparable> {
 
     E value1;
@@ -14,6 +18,19 @@ public class FindMaxValue<E extends Comparable> {
 
     public FindMaxValue() {
 
+    }
+
+    public static <E extends Comparable<E>> E findMoreMaximum(E... args) {
+        List<E> list = Arrays.asList(args);
+        Collections.sort(list);
+        return list.get(list.size() - 1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(FindMaxValue.findMoreMaximum(12, 12, 31, 432, 134, 43234, 543234));
+        System.out.println(FindMaxValue.findMoreMaximum('A', 'C', 'M', 'B', 'Z', 'J'));
+        System.out.println(FindMaxValue.findMoreMaximum("Mangesh", "Avinash", "Rajesh", "Ram", "Prakash"));
+        System.out.println(FindMaxValue.findMoreMaximum(1.05f, 10.2f, 300.0f, 1.0f, 100.0f, 200.0f));
     }
 
     public E findMaximumValue() {
