@@ -1,37 +1,33 @@
 package com.bridgelabz.generics;
 
-public class FindMaxValue {
+public class FindMaxValue<E extends Comparable> {
 
-    public Integer findMaximumValue(Integer number1, Integer number2, Integer number3) {
-        Integer maximumValue = number1;
-        if (number2.compareTo(maximumValue) > 0) {
-            maximumValue = number2;
-        }
-        if (number3.compareTo(maximumValue) > 0) {
-            maximumValue = number3;
-        }
-        return maximumValue;
+    E value1;
+    E value2;
+    E value3;
+
+    public FindMaxValue(E value1, E value2, E value3) {
+        this.value1 = value1;
+        this.value2 = value2;
+        this.value3 = value3;
     }
 
-    public Float findMaximumFloatValue(Float number1, Float number2, Float number3) {
-        Float maximumValue = number1;
-        if (number2.compareTo(maximumValue) > 0) {
-            maximumValue = number2;
-        }
-        if (number3.compareTo(maximumValue) > 0) {
-            maximumValue = number3;
-        }
-        return maximumValue;
+    public FindMaxValue() {
+
     }
 
-    public Character findMaximumCharacter(Character char1, Character char2, Character char3) {
-        Character maximumCharacter = char1;
-        if (char2.compareTo(maximumCharacter) > 0) {
-            maximumCharacter = char2;
+    public E findMaximumValue() {
+        return findMaximumValue(value1, value2, value3);
+    }
+
+    public E findMaximumValue(E value1, E value2, E value3) {
+        E maximumNumber = value1;
+        if (value2.compareTo(maximumNumber) > 0) {
+            maximumNumber = value2;
         }
-        if (char3.compareTo(maximumCharacter) > 0) {
-            maximumCharacter = char3;
+        if (value3.compareTo(maximumNumber) > 0) {
+            maximumNumber = value3;
         }
-        return maximumCharacter;
+        return maximumNumber;
     }
 }

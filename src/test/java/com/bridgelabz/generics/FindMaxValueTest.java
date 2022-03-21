@@ -17,63 +17,63 @@ public class FindMaxValueTest {
 
     @Test
     public void givenThreeIntegerNumber_shouldReturn_firstNumberIsMaximum() {
-        Integer actual = findMaxValue.findMaximumValue(100, 20, 30);
+        Comparable actual = findMaxValue.findMaximumValue(100, 20, 30);
         Integer expected = 100;
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void givenThreeIntegerNumber_shouldReturn_secondNumberIsMaximum() {
-        Integer actual = findMaxValue.findMaximumValue(100, 20, 30);
+        Comparable actual = findMaxValue.findMaximumValue(100, 20, 30);
         Integer expected = 100;
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void givenThreeIntegerNumber_shouldReturn_thirdNumberIsMaximum() {
-        Integer actual = findMaxValue.findMaximumValue(100, 20, 30);
+        Comparable actual = findMaxValue.findMaximumValue(100, 20, 30);
         Integer expected = 100;
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void givenThreeFloatNumber_shouldReturn_firstNumberIsMaximum() {
-        Float actual = findMaxValue.findMaximumFloatValue(10.0F, 5.0F, 3.0F);
+        Comparable actual = findMaxValue.findMaximumValue(10.0F, 5.0F, 3.0F);
         Float expected = 10.0F;
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void givenThreeFloatNumber_shouldReturn_secondNumberIsMaximum() {
-        Float actual = findMaxValue.findMaximumFloatValue(5.0F, 10.0F, 3.0F);
+        Comparable actual = findMaxValue.findMaximumValue(5.0F, 10.0F, 3.0F);
         Float expected = 10.0F;
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void givenThreeFloatNumber_shouldReturn_thirdNumberIsMaximum() {
-        Float actual = findMaxValue.findMaximumFloatValue(3.0F, 5.0F, 10.0F);
+        Comparable actual = findMaxValue.findMaximumValue(3.0F, 5.0F, 10.0F);
         Float expected = 10.0F;
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void givenThreeCharacter_shouldReturn_firstCharacterIsMaximum() {
-        Character actual = findMaxValue.findMaximumCharacter('Z', 'B', 'A');
+        Comparable actual = findMaxValue.findMaximumValue('Z', 'B', 'A');
         Character expected = 'Z';
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void givenThreeCharacter_shouldReturn_secondCharacterIsMaximum() {
-        Character actual = findMaxValue.findMaximumCharacter('B', 'Z', 'A');
+        Comparable actual = findMaxValue.findMaximumValue('B', 'Z', 'A');
         Character expected = 'Z';
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void givenThreeCharacter_shouldReturn_thirdCharacterIsMaximum() {
-        Character actual = findMaxValue.findMaximumCharacter('M', 'B', 'Z');
+        Comparable actual = findMaxValue.findMaximumValue('M', 'B', 'Z');
         Character expected = 'Z';
         Assert.assertEquals(expected, actual);
     }
